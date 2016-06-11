@@ -13,13 +13,13 @@ import java.util.Collection;
 @Path("/books")
 public class BookResource {
 BookDao dao = new BookDao();
-
+//http://localhost:8080/myapp/books
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Collection<Book> getBooks(){
         return(dao.getbooks());
     }
-
+    //http://localhost:8080/myapp/books/1
     @Path("/{id}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
